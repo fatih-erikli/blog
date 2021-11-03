@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>@import url(https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap);</style><style>body {
+  font-family: 'Lora', serif;
+}
+
+.letter {
+  height: 4.1em;
+  display: block;
+  margin: 0.4em auto;
+}
+
+.ascender-height  { height: 6%; background-color: rgb(255, 255, 255); margin-top: 0.9em;}
+.cap-height       { height: 4%; background-color: rgb(255, 255, 255); }
+.median           { height: 30%; background-color: rgb(255, 255, 255);}
+.x-height         { height: 30%; background-color: rgb(255, 255, 255);}
+.baseline         { height: 16%; background-color: rgb(255, 255, 255); }
+.descender-height { height: 26%;  background-color: rgb(232, 227, 255); border-bottom: 0px solid rgb(238, 238, 238); }
+
+.guide-lines {
+  height: 100%;
+  background-color: white;
+}
+
+.guide-lines > div {
+  box-sizing: border-box;
+}
+
+.text-content {
+  font-size: 4.1em;
+  position: absolute;
+  line-height: 1em;
+  font-style: italic;
+  display: block;
+  position: absolute;
+  width: 960px;
+  left: 0;
+  margin-left: calc((100vw - 960px) / 2);
+}
+
+.paragraph {
+  width: 960px;
+  margin: 0.2em auto;
+  font-size: 1.8em;
+  line-height: 1.2em;
+  color: #f7f7f7;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+}
+
+.paragraph-chunk {
+  display: inline;
+  margin: 0 0 0 0;
+}
+
+.paragraph-sentence:after {
+  content: ".";
+  display: inline-block;
+  width: 0.4em;
+  height: 1em;
+  margin-left: -0.2em;
+}
+
+.paragraph-sentence:last-child:after {
+  display: none;
+}
+
+.paragraph-sentence:hover {
+  background-color: rgba(0, 47, 255, 0.048);
+  color: rgb(95, 95, 95);
+  z-index: -1;
+}
+
+.paragraph-chunk .sentence-part:hover {
+  background: rgb(13, 69, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.space {
+  width: 0.2em;
+  content: " ";
+  display: inline-block;
+}
+
+.paragraph-sentence {
+  display: inline;
+}
+
+.paragraph-shadow {
+  position: absolute;
+  width: 960px;
+  color: rgb(189, 189, 189);
+  top: 0;
+  background: #fff;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 15px 0;
+}
+
+.paragraph-content {
+  color: rgb(29, 13, 255);
+  margin-top: 0;
+  margin-left: 0;
+  padding-bottom: 15px;
+}
+
+.header {
+  margin: 0 0 1.6em;
+  color: rgba(101, 84, 236);
+}
+
+.emphasize {
+  font-size: 2em;
+  display: block;
+  float: right;
+  color: rgb(187, 187, 187);
+  padding: .2em 0.2em .2em .2em;
+  line-height: 1em;
+}
+
+.section-title {
+  font-size: 3.4em;
+  display: block;
+  color: #6554ec;
+
+  width: 960px;
+  margin: 0.4em auto 0;
+  font-weight: normal;
+}
+
+.section-title:before {
+  position: absolute;
+  content: "";
+  width: 960px;
+  margin-left: -calc(960px / 2);
+  height: 0.2em;
+  border-top: 1px solid rgb(238, 238, 238); ;
+  border-bottom: 1px solid rgb(238, 238, 238); ;
+  margin-top: 1em;
+  z-index: -1;
+}
+
+fieldset {
+  width: 300px;
+  position: relative;
+  padding-bottom: 2.5em;
+
+  margin-left: calc((100vw - 960px) / 2);
+  margin-top: 2em;
+  border: 1px solid rgb(255, 186, 59);
+  background:  rgb(255, 247, 232);
+  font-family: monospace;
+}
+
+fieldset legend {
+  background:  rgb(255, 186, 59);
+  padding: 0.2em 0.4em;
+}
+
+fieldset label {
+  display: block;
+  padding: 0.4em 0;
+  color: rgb(221, 144, 1);
+}
+
+fieldset input[type='text'],
+fieldset input[type='password'] {
+  position: absolute;
+  right: 10px;
+  width: 60%;
+  background: white;
+  border: 1px solid rgb(255, 186, 59);
+  font-family: monospace;
+}
+
+fieldset input[type='submit'] {
+  margin-left: calc(100% - 60% - 31px);
+  margin-top: 0.2em;
+  left: 15px;
+  position: absolute;
+  background:  rgb(255, 186, 59);
+  border: 1px solid rgb(221, 144, 1);
+  padding: 0.3em;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.logo {
+  background: #32f22b;
+  display: inline-block;
+  font-size: 2em;
+  padding: 0.2em 0.4em;
+  padding-top: 0.2em;
+  color: #1c1c1c;
+  line-height: 1em;
+  padding-top: 0.4em;
+  text-decoration: none;
+  margin-top: 1.6em;
+}
+
+.logo:active {
+  margin-top: calc(1.6em + 2px);
+  margin-left: 2px;
+}
+
+.logo:hover {
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation {
+  width: 960px;
+  text-align: right;;
+  margin: 2em auto 0;
+}
+
+.navigation h1 {
+  float: left;
+  font-size: 4em;
+  font-weight: normal;
+  color: #dbdbdb;
+}
+
+article {
+  width: 960px;
+  margin: auto;
+}
+
+article time {
+  display: block;
+  float: right;
+  font-size: 1.6em;
+}
+
+article a {
+  font-size: 1.6em;
+  text-decoration: none;
+  color: rgba(101, 84, 236);
+  text-decoration: underline;
+}
+
+article a:hover {
+  color: black;
+}
+
+article li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+article ul {
+  margin: 0;
+  padding: 0 0.2em;
+}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLDBCQUEwQjtBQUM1Qjs7QUFFQTtFQUNFLGFBQWE7RUFDYixjQUFjO0VBQ2Qsa0JBQWtCO0FBQ3BCOztBQUVBLG9CQUFvQixVQUFVLEVBQUUsb0NBQW9DLEVBQUUsaUJBQWlCLENBQUM7QUFDeEYsb0JBQW9CLFVBQVUsRUFBRSxvQ0FBb0MsRUFBRTtBQUN0RSxvQkFBb0IsV0FBVyxFQUFFLG9DQUFvQyxDQUFDO0FBQ3RFLG9CQUFvQixXQUFXLEVBQUUsb0NBQW9DLENBQUM7QUFDdEUsb0JBQW9CLFdBQVcsRUFBRSxvQ0FBb0MsRUFBRTtBQUN2RSxvQkFBb0IsV0FBVyxHQUFHLG9DQUFvQyxFQUFFLDJDQUEyQyxFQUFFOztBQUVySDtFQUNFLFlBQVk7RUFDWix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osT0FBTztFQUNQLHNDQUFzQztBQUN4Qzs7QUFFQTtFQUNFLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixxQkFBcUI7RUFDckIsWUFBWTtFQUNaLFdBQVc7RUFDWCxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSx5Q0FBeUM7RUFDekMsc0JBQXNCO0VBQ3RCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLDRCQUE0QjtFQUM1QixZQUFZO0VBQ1osZUFBZTtBQUNqQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixZQUFZO0VBQ1oscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1oseUJBQXlCO0VBQ3pCLE1BQU07RUFDTixnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLGFBQWE7RUFDYixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixjQUFjO0VBQ2Qsb0JBQW9CO0FBQ3RCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxjQUFjO0VBQ2QsWUFBWTtFQUNaLHlCQUF5QjtFQUN6Qiw2QkFBNkI7RUFDN0IsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGNBQWM7RUFDZCxjQUFjOztFQUVkLFlBQVk7RUFDWixvQkFBb0I7RUFDcEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFdBQVc7RUFDWCxZQUFZO0VBQ1osNkJBQTZCO0VBQzdCLGFBQWE7RUFDYix3Q0FBd0M7RUFDeEMsMkNBQTJDO0VBQzNDLGVBQWU7RUFDZixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLHFCQUFxQjs7RUFFckIsc0NBQXNDO0VBQ3RDLGVBQWU7RUFDZixtQ0FBbUM7RUFDbkMsK0JBQStCO0VBQy9CLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLDhCQUE4QjtFQUM5QixvQkFBb0I7QUFDdEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLHVCQUF1QjtBQUN6Qjs7QUFFQTs7RUFFRSxrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFVBQVU7RUFDVixpQkFBaUI7RUFDakIsbUNBQW1DO0VBQ25DLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLG9DQUFvQztFQUNwQyxpQkFBaUI7RUFDakIsVUFBVTtFQUNWLGtCQUFrQjtFQUNsQiw4QkFBOEI7RUFDOUIsa0NBQWtDO0VBQ2xDLGNBQWM7RUFDZCxzQkFBc0I7RUFDdEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsbUJBQW1CO0VBQ25CLHFCQUFxQjtFQUNyQixjQUFjO0VBQ2Qsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixxQkFBcUI7RUFDckIsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsNkJBQTZCO0VBQzdCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1oscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsY0FBYztFQUNkLG1CQUFtQjtFQUNuQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGNBQWM7RUFDZCxZQUFZO0VBQ1osZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtFQUNyQix5QkFBeUI7RUFDekIsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxTQUFTO0VBQ1QsZ0JBQWdCO0FBQ2xCIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9TG9yYTppdGFsQDA7MSZkaXNwbGF5PXN3YXAnKTtcblxuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiAnTG9yYScsIHNlcmlmO1xufVxuXG4ubGV0dGVyIHtcbiAgaGVpZ2h0OiA0LjFlbTtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbjogMC40ZW0gYXV0bztcbn1cblxuLmFzY2VuZGVyLWhlaWdodCAgeyBoZWlnaHQ6IDYlOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7IG1hcmdpbi10b3A6IDAuOWVtO31cbi5jYXAtaGVpZ2h0ICAgICAgIHsgaGVpZ2h0OiA0JTsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyB9XG4ubWVkaWFuICAgICAgICAgICB7IGhlaWdodDogMzAlOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7fVxuLngtaGVpZ2h0ICAgICAgICAgeyBoZWlnaHQ6IDMwJTsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO31cbi5iYXNlbGluZSAgICAgICAgIHsgaGVpZ2h0OiAxNiU7IGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsgfVxuLmRlc2NlbmRlci1oZWlnaHQgeyBoZWlnaHQ6IDI2JTsgIGJhY2tncm91bmQtY29sb3I6IHJnYigyMzIsIDIyNywgMjU1KTsgYm9yZGVyLWJvdHRvbTogMHB4IHNvbGlkIHJnYigyMzgsIDIzOCwgMjM4KTsgfVxuXG4uZ3VpZGUtbGluZXMge1xuICBoZWlnaHQ6IDEwMCU7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xufVxuXG4uZ3VpZGUtbGluZXMgPiBkaXYge1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuXG4udGV4dC1jb250ZW50IHtcbiAgZm9udC1zaXplOiA0LjFlbTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBmb250LXN0eWxlOiBpdGFsaWM7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiA5NjBweDtcbiAgbGVmdDogMDtcbiAgbWFyZ2luLWxlZnQ6IGNhbGMoKDEwMHZ3IC0gOTYwcHgpIC8gMik7XG59XG5cbi5wYXJhZ3JhcGgge1xuICB3aWR0aDogOTYwcHg7XG4gIG1hcmdpbjogMC4yZW0gYXV0bztcbiAgZm9udC1zaXplOiAxLjhlbTtcbiAgbGluZS1oZWlnaHQ6IDEuMmVtO1xuICBjb2xvcjogI2Y3ZjdmNztcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgYmFja2dyb3VuZDogI2ZmZmZmZjtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ucGFyYWdyYXBoLWNodW5rIHtcbiAgZGlzcGxheTogaW5saW5lO1xuICBtYXJnaW46IDAgMCAwIDA7XG59XG5cbi5wYXJhZ3JhcGgtc2VudGVuY2U6YWZ0ZXIge1xuICBjb250ZW50OiBcIi5cIjtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB3aWR0aDogMC40ZW07XG4gIGhlaWdodDogMWVtO1xuICBtYXJnaW4tbGVmdDogLTAuMmVtO1xufVxuXG4ucGFyYWdyYXBoLXNlbnRlbmNlOmxhc3QtY2hpbGQ6YWZ0ZXIge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4ucGFyYWdyYXBoLXNlbnRlbmNlOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCA0NywgMjU1LCAwLjA0OCk7XG4gIGNvbG9yOiByZ2IoOTUsIDk1LCA5NSk7XG4gIHotaW5kZXg6IC0xO1xufVxuXG4ucGFyYWdyYXBoLWNodW5rIC5zZW50ZW5jZS1wYXJ0OmhvdmVyIHtcbiAgYmFja2dyb3VuZDogcmdiKDEzLCA2OSwgMjU1KTtcbiAgY29sb3I6IHdoaXRlO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5zcGFjZSB7XG4gIHdpZHRoOiAwLjJlbTtcbiAgY29udGVudDogXCIgXCI7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLnBhcmFncmFwaC1zZW50ZW5jZSB7XG4gIGRpc3BsYXk6IGlubGluZTtcbn1cblxuLnBhcmFncmFwaC1zaGFkb3cge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiA5NjBweDtcbiAgY29sb3I6IHJnYigxODksIDE4OSwgMTg5KTtcbiAgdG9wOiAwO1xuICBiYWNrZ3JvdW5kOiAjZmZmO1xuICBtYXJnaW4tbGVmdDogMDtcbiAgbWFyZ2luLXRvcDogMDtcbiAgcGFkZGluZzogMTVweCAwO1xufVxuXG4ucGFyYWdyYXBoLWNvbnRlbnQge1xuICBjb2xvcjogcmdiKDI5LCAxMywgMjU1KTtcbiAgbWFyZ2luLXRvcDogMDtcbiAgbWFyZ2luLWxlZnQ6IDA7XG4gIHBhZGRpbmctYm90dG9tOiAxNXB4O1xufVxuXG4uaGVhZGVyIHtcbiAgbWFyZ2luOiAwIDAgMS42ZW07XG4gIGNvbG9yOiByZ2JhKDEwMSwgODQsIDIzNik7XG59XG5cbi5lbXBoYXNpemUge1xuICBmb250LXNpemU6IDJlbTtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsb2F0OiByaWdodDtcbiAgY29sb3I6IHJnYigxODcsIDE4NywgMTg3KTtcbiAgcGFkZGluZzogLjJlbSAwLjJlbSAuMmVtIC4yZW07XG4gIGxpbmUtaGVpZ2h0OiAxZW07XG59XG5cbi5zZWN0aW9uLXRpdGxlIHtcbiAgZm9udC1zaXplOiAzLjRlbTtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGNvbG9yOiAjNjU1NGVjO1xuXG4gIHdpZHRoOiA5NjBweDtcbiAgbWFyZ2luOiAwLjRlbSBhdXRvIDA7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG59XG5cbi5zZWN0aW9uLXRpdGxlOmJlZm9yZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgY29udGVudDogXCJcIjtcbiAgd2lkdGg6IDk2MHB4O1xuICBtYXJnaW4tbGVmdDogLWNhbGMoOTYwcHggLyAyKTtcbiAgaGVpZ2h0OiAwLjJlbTtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHJnYigyMzgsIDIzOCwgMjM4KTsgO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiKDIzOCwgMjM4LCAyMzgpOyA7XG4gIG1hcmdpbi10b3A6IDFlbTtcbiAgei1pbmRleDogLTE7XG59XG5cbmZpZWxkc2V0IHtcbiAgd2lkdGg6IDMwMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHBhZGRpbmctYm90dG9tOiAyLjVlbTtcblxuICBtYXJnaW4tbGVmdDogY2FsYygoMTAwdncgLSA5NjBweCkgLyAyKTtcbiAgbWFyZ2luLXRvcDogMmVtO1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2IoMjU1LCAxODYsIDU5KTtcbiAgYmFja2dyb3VuZDogIHJnYigyNTUsIDI0NywgMjMyKTtcbiAgZm9udC1mYW1pbHk6IG1vbm9zcGFjZTtcbn1cblxuZmllbGRzZXQgbGVnZW5kIHtcbiAgYmFja2dyb3VuZDogIHJnYigyNTUsIDE4NiwgNTkpO1xuICBwYWRkaW5nOiAwLjJlbSAwLjRlbTtcbn1cblxuZmllbGRzZXQgbGFiZWwge1xuICBkaXNwbGF5OiBibG9jaztcbiAgcGFkZGluZzogMC40ZW0gMDtcbiAgY29sb3I6IHJnYigyMjEsIDE0NCwgMSk7XG59XG5cbmZpZWxkc2V0IGlucHV0W3R5cGU9J3RleHQnXSxcbmZpZWxkc2V0IGlucHV0W3R5cGU9J3Bhc3N3b3JkJ10ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxMHB4O1xuICB3aWR0aDogNjAlO1xuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiKDI1NSwgMTg2LCA1OSk7XG4gIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7XG59XG5cbmZpZWxkc2V0IGlucHV0W3R5cGU9J3N1Ym1pdCddIHtcbiAgbWFyZ2luLWxlZnQ6IGNhbGMoMTAwJSAtIDYwJSAtIDMxcHgpO1xuICBtYXJnaW4tdG9wOiAwLjJlbTtcbiAgbGVmdDogMTVweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBiYWNrZ3JvdW5kOiAgcmdiKDI1NSwgMTg2LCA1OSk7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYigyMjEsIDE0NCwgMSk7XG4gIHBhZGRpbmc6IDAuM2VtO1xuICBmb250LWZhbWlseTogbW9ub3NwYWNlO1xuICBmb250LXNpemU6IDAuOWVtO1xufVxuXG4ubG9nbyB7XG4gIGJhY2tncm91bmQ6ICMzMmYyMmI7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgZm9udC1zaXplOiAyZW07XG4gIHBhZGRpbmc6IDAuMmVtIDAuNGVtO1xuICBwYWRkaW5nLXRvcDogMC4yZW07XG4gIGNvbG9yOiAjMWMxYzFjO1xuICBsaW5lLWhlaWdodDogMWVtO1xuICBwYWRkaW5nLXRvcDogMC40ZW07XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgbWFyZ2luLXRvcDogMS42ZW07XG59XG5cbi5sb2dvOmFjdGl2ZSB7XG4gIG1hcmdpbi10b3A6IGNhbGMoMS42ZW0gKyAycHgpO1xuICBtYXJnaW4tbGVmdDogMnB4O1xufVxuXG4ubG9nbzpob3ZlciB7XG4gIGJhY2tncm91bmQ6IGJsYWNrO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLm5hdmlnYXRpb24ge1xuICB3aWR0aDogOTYwcHg7XG4gIHRleHQtYWxpZ246IHJpZ2h0OztcbiAgbWFyZ2luOiAyZW0gYXV0byAwO1xufVxuXG4ubmF2aWdhdGlvbiBoMSB7XG4gIGZsb2F0OiBsZWZ0O1xuICBmb250LXNpemU6IDRlbTtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgY29sb3I6ICNkYmRiZGI7XG59XG5cbmFydGljbGUge1xuICB3aWR0aDogOTYwcHg7XG4gIG1hcmdpbjogYXV0bztcbn1cblxuYXJ0aWNsZSB0aW1lIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsb2F0OiByaWdodDtcbiAgZm9udC1zaXplOiAxLjZlbTtcbn1cblxuYXJ0aWNsZSBhIHtcbiAgZm9udC1zaXplOiAxLjZlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBjb2xvcjogcmdiYSgxMDEsIDg0LCAyMzYpO1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cblxuYXJ0aWNsZSBhOmhvdmVyIHtcbiAgY29sb3I6IGJsYWNrO1xufVxuXG5hcnRpY2xlIGxpIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiAwO1xufVxuXG5hcnRpY2xlIHVsIHtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiAwIDAuMmVtO1xufVxuXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="container"><div class="navigation"><h1>Fatih Erikli's Blog</h1><a href="#" class="logo">↵</a></div><div class="header"><div class="letter"><div class="guide-lines"><div class="text-content">My notes on web-development,</div><div class="ascender-height"></div><div class="cap-height"></div><div class="median"></div><div class="x-height"></div><div class="baseline"></div><div class="descender-height"></div></div></div><div class="letter"><div class="guide-lines"><div class="text-content">arts, and everything. </div><div class="ascender-height"></div><div class="cap-height"></div><div class="median"></div><div class="x-height"></div><div class="baseline"></div><div class="descender-height"></div></div></div></div><article class="block articles" id="latest-posts"><section><ul><li><time>Jan 01, 2021</time><a href="https://fatiherikli.medium.com/non-developers-guide-to-the-python-programming-language-934a199ec3db">Non-Developers Guide to the Python Programming Language</a></li><li><time>June 28, 2017</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/django-girls-krakow/">Django Girls Krakow</a></li><li><time>Aug 22, 2016</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/linux-yaz-kampi-2016/">Linux Yaz Kampı 2016</a></li><li><time>July 21, 2016</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/lolero/">Bir Shitposting Hikayesi: Lölero</a></li><li><time>June 26, 2016</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/markov-ile-birtakim-olaylar-zinciri/">Markov ile birtakım olaylar zinciri</a></li><li><time>May 16, 2016</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/engelsiz-hackathon/">Engelsiz Hackathon</a></li><li><time>Sept. 10, 2015</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/fil-hakkinda-gelistirme-notlarim/">Fil hakkında geliştirme notlarım</a></li><li><time>Jan. 21, 2015</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/akademik-bilisime-katilacaklara-notlar/">Akademik Bilişim 2015</a></li><li><time>Jan. 18, 2015</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/hackers-and-performers/">Hackers and Performers</a></li><li><time>Dec. 19, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/engelsiz-pedal-bartin-turu/">Bisikletle Bartın'a Gitmek</a></li><li><time>Oct. 2, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/programming-languages-network/">Programlama Dilleri Ağları</a></li><li><time>Sept. 9, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/her-sey-sermaye-icin-sevgilim/">Çatla Beton!</a></li><li><time>Aug. 24, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/linux-yaz-kampi-2014/">Linux Yaz Kampı 2014</a></li><li><time>April 14, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/brainfuck-good-parts/">Brainfuck: The Good Parts</a></li><li><time>April 3, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/oyunlarda-trigonometri/">Oyunlarda Trigonometri</a></li><li><time>Feb. 21, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/progresif-org/">Progresif şeyler</a></li><li><time>Feb. 7, 2014</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/her-seyin-kurami/">The theory of everything</a></li><li><time>Sept. 13, 2013</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/riva-kampi/">Bir haftasonu kampından kareler</a></li><li><time>Feb. 6, 2013</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/reading-tabular-data-with-tabularize-py/">Reading tabular data with tabularize.py</a></li><li><time>Feb. 6, 2013</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/tabularize-tablo-yapisindaki-verileri-okumak/">Tabularize.py ile tablo yapısındaki verileri okumak</a></li><li><time>Jan. 27, 2013</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/behaviour-driven-development/">Lettuce ile Behaviour Driven Development</a></li><li><time>Dec. 27, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/bahcesehir-bmk-django-dersleri/">Bahçeşehir BMK Django Dersleri</a></li><li><time>Nov. 25, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/24-kasim-python-istanbul-bulusmasi/">24 Kasım Python İstanbul buluşması</a></li><li><time>Nov. 3, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/dude-its-python/">"Dude, It's Python. Not something else"</a></li><li><time>Oct. 15, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/dbpatterns-hakkinda-gelistirme-notlarim/">Dbpatterns.com hakkında geliştirme notlarım</a></li><li><time>Sept. 30, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/tastypie-ve-mongodb-ile-bir-web-servisi-yazalim/">Tastypie ve MongoDB ile bir web servisi yazalım</a></li><li><time>Sept. 27, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/django-api-playground/">Django API Playground</a></li><li><time>Sept. 19, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/vagrant-uzerinde-birden-fazla-makina-calistirmak/">Vagrant üzerinde birden fazla makina çalıştırmak</a></li><li><time>Sept. 3, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/django-orm-etkili-bir-sekilde-kullanmak/">Django ORM'i etkili bir şekilde kullanmak</a></li><li><time>June 18, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/python-with-deyimi-ve-context-management/">Python'da with deyimi ve Context Management işlemi</a></li><li><time>June 1, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/backbone-js-ile-fonksiyonel-programlama/">Underscore.js ile hayatınızı kolaylaştıracak fonksiyonel programlama araçları</a></li><li><time>May 28, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/developerlar-icin-turkce-podcast/">Developer'lar için Türkçe podcast</a></li><li><time>May 26, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/python-istanbul-mayis-bulusmasi/">Python İstanbul Mayıs buluşmasından notlar</a></li><li><time>March 20, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/pyquery-python-ile-jquery-tad-nda-html-parse-edin/">PyQuery: Python ile jQuery tadında html parse edin</a></li><li><time>March 13, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/backbone-django-tastype-ile-scrum-board/">Backbone.js, Django ve Tastypie üçlüsü ile bir scrum board uygulaması</a></li><li><time>Feb. 28, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/pythonda-fonksiyonel-programlama-ve-bir-internal-dsl/">Python'da fonksiyonel programlama ve bir Internal DSL örneği</a></li><li><time>Feb. 28, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/djangoda-admin-uzerinde-cal-s-rken-hayat-n-z/">Django'da admin üzerinde çalışırken hayatınızı kolaylaştıracak iki decorator</a></li><li><time>Feb. 26, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/herokudaki-uygulaman-z-icin-sql-konsolu/">Heroku'daki uygulamanız için SQL konsolu</a></li><li><time>Feb. 17, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/python-uzerinde-design-patterns-tasar-m-desenleri/">Python üzerinde Design Patterns (Tasarım Desenleri) örnekleri</a></li><li><time>Feb. 16, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/python-konsolunda-en-son-evaluate-edilen-degere-ulasmak/">Python konsolunda en son evaluate edilen değere ulaşmak</a></li><li><time>Feb. 15, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/sosyate-com/">İlk Rails Projem: sosyate.com</a></li><li><time>Feb. 12, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/12-subat-python-istanbul-bulusmas/">12 Şubat - Python İstanbul buluşması</a></li><li><time>Feb. 11, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/mongodb-database-yap-s-uzerinde-mapreduce-islemleri/">MongoDB database yapısı üzerinde MapReduce işlemleri</a></li><li><time>Feb. 9, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/scaling-python-ve-django-uygulamalarinda-asenkton-isler/">Birazcık scaling: Python ve Django uygulamalarında asenkron işler (RabbitMQ)</a></li><li><time>Jan. 31, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/obfuscated-c-code-contest/">Obfuscated C Code Contest</a></li><li><time>Jan. 26, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/anti-patterns/">Anti-patterns</a></li><li><time>Jan. 26, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/kankim-kodlari-artik-acik/">kank.im'in kodları artık açık</a></li><li><time>Jan. 22, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/backends-djangoda-string-ile-belirtiginiz-class/">Backends: Django'da String İle Belirtiğiniz Class'ı Import Etmek</a></li><li><time>Jan. 21, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/tasiniyoruz/">Bitbucket'dan taşınıyorum</a></li><li><time>Jan. 21, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/djangoda-sitemap-framework-ve-ping-google-islemi/">Django'da Sitemap Framework ve Ping İşlemi</a></li><li><time>Jan. 21, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/etkileyici-bir-sunum-nas-l-olmal-d-r/">etkileyici bir sunum nasıl olmalıdır</a></li><li><time>Jan. 21, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/sikinti-yok-haci/">hadi hayırlısı</a></li><li><time>Jan. 16, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/mysqlde-utf8-turkish-ci-veritaban/">mysql'de utf8_turkish_ci veritabanı;</a></li><li><time>Jan. 1, 2012</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/myadslot-personal-advertising-manager/">Myadslot - kişisel reklam yöneticiniz</a></li><li><time>Dec. 20, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/djangoda-basitce-template-render-etmek-icin-yazd-g-m/">django'da basitçe template render etmek için yazdığım bir decorator</a></li><li><time>Dec. 20, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/en-basit-sekilde-bir-decorator/">en basit şekilde bir decorator</a></li><li><time>Dec. 9, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/django-admin-order-field/">django admin order field</a></li><li><time>Nov. 25, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/ajax-n-dezavantajlar-na-uzerine/">ajax'ın dezavantajlarına üzerine</a></li><li><time>Nov. 25, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/jquery-ile-sayfan-n-degisen-hashini-yakalamak-icin/">jquery ile sayfanın değişen hash'ini yakalamak için</a></li><li><time>Nov. 17, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/feform-php-form-class/">feform - php'de django tadında formlar</a></li><li><time>Oct. 23, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/kendi-frameworkumu-yazd-m-geyigi/">kendi framework'ümü yazdım geyiği</a></li><li><time>Oct. 9, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/python-regular-expressions-phpdeki-strip-tags-ornegi/">python regular expressions (php'deki strip_tags örneği)</a></li><li><time>Oct. 9, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/pythonda-urllib2-ile-unicode-seklinde-web-sayfas-n-n-n/">python'da urllib2 ile unicode şeklinde web sayfasınının içeriğini çekmek</a></li><li><time>Oct. 6, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/bashde-sadece-klasorleri-listelemek-icin-ls-d/">bash'de sadece klasörleri listelemek için "ls -d /*" komutu yeterli. </a></li><li><time>Oct. 5, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/django-admin-filterspecs/">django admin FilterSpecs</a></li><li><time>Oct. 2, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/flask-microframework/">flask (microframework)</a></li><li><time>Oct. 2, 2011</time><a href="http://web.archive.org/web/20180707142754/http://blog.fatiherikli.com/post/selam-d-nyal/">selam dünyalı</a></li></ul></section></article></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="index_files/bundle.js"></script><script src="index_files/vendorsmain.js"></script><script src="index_files/main.js"></script>
+
+</body></html>
